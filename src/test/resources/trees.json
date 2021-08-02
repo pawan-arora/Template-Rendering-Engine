@@ -1,0 +1,17 @@
+{
+  "id":"3",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"Trees",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"Trees",
+    "description":"",
+    "collectionType":{
+      "collectionType":"2"
+    },
+    "tags":[
+      "Test"
+    ],
+    "autogen":false
+  }
+}

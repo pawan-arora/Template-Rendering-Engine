@@ -1,0 +1,17 @@
+{
+  "id":"1C4AE054DEC09A21536D0EF7828A00A0162E3937AE26A1631644904107BD6F0A",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"Addresses",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"Addresses",
+    "description":"",
+    "collectionType":{
+      "collectionType":"35595BC0D93EFF3EE2453477349FE81964D647AC569D64BB37E8DECFA40188BB"
+    },
+    "tags":[
+      "Test"
+    ],
+    "autogen":false
+  }
+}

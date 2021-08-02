@@ -1,0 +1,23 @@
+{
+  "id":"2AA43854F7569A6BC7CE96DC61A77990602EAFB27492731B5CAB822193BD5C68",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"Char",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"Char",
+    "description":"single character",
+    "extendedType":{
+      "parentType":"22ED1F787B6B0926AB0577860AF7543705341C053EB1B4A74E7CC199A0645E52",
+      "properties":{
+        "Operators":"==, !=",
+        "Min":"1",
+        "Max":"1",
+        "Nullable":"true"
+      }
+    },
+    "tags":[
+      "myTag"
+    ],
+    "autogen":false
+  }
+}

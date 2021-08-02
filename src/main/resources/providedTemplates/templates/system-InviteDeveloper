@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body bgcolor="#f1f1f1" style="background:#f1f1f1;">
+
+    <style type="text/css">
+        body,
+        td {
+            font-family: verdana, geneva, arial;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        p {
+            line-height: 22px;
+        }
+
+        .small {
+            font-size: 11px;
+        }
+
+        .footer a {
+            color: #1d97d5;
+            margin: 0px 1px;
+        }
+    </style>
+
+    <table width="100%" border="0" cellspacing="10" cellpadding="0" class="wrapper">
+        <tr>
+            <td align="center" valign="top" style="text-align:center;">
+                <table border="0" cellspacing="0" cellpadding="10" class="main" bgcolor="#ffffff" style="border: 1px solid #e4e3e3;text-align: left; margin-left: auto; margin-right: auto;background:#ffffff;" width="550">
+                    <tr>
+                        <td style="text-align: left;">
+                            <img src="https://www.simplifier.io/wp-content/uploads/2019/02/simplifier-logo-1x-1.png" alt="" border="0" style="border:0px;border-width: 0px; height: 34px; width: 178px; margin: 20px 0 0 30px; padding: 0 0 20px 0;background:#fff;" width="178" height="34" />
+                            <div style="border-bottom:3px solid #ddd;border-top:1px solid #bdbdbd;background: #fff;padding: 30px;width: 540px;">
+                                <div style="font-weight: bold;font-size: 18px!important;color: #0099d8!important;padding-top: 33px;">You've been invited.</div>
+                                <br/> Someone wants you to work on the application <b>{{AppName}}</b>.
+                                <br/>Use the following link to enter directly.
+                                <br/>
+                                <br/> Please set a password first, and then log in with your email address.
+                                <br/>
+                                <p style="margin:0;">
+                                    <b>Username:</b> {{email}}
+                                    <br/>
+									<br/>
+                                </p>
+
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td>
+                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td align="center" style="border-radius: 3px;" bgcolor="#1c98d6"><a href="{{invitationUrl}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; text-decoration: none;border-radius: 3px; padding: 9px 18px; border: 1px solid #1c98d6; display: inline-block;font-weight:bold;">Start building!</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <br/>
+								<br/>
+                                <p style="margin:0;">
+                                    <b>Are you new to Simplifier?</b>
+                                    <br/>Have a look at the <a href="https://academy.simplifier.io/doc/current-release/" target="_blank">Documentation</a>.
+                                </p>
+                            </div>
+                            <div style=" background: #F8F8F8;padding: 14px 0px;width: 600px;font-size:10px;color:#888;text-align: center;line-height: 16px;">Simplifier AG | Nürnberger Str. 47A | Würzburg 97076 | Deutschland | <a href="https://www.simplifier.io">Simplifier Website</a>
+                                <br/> Copyright © 2019 Simplifier AG, All rights reserved.
+                                <br/>
+                                <br/>
+                                <a href="https://www.facebook.com/simplifier.io/" target="_blank"><img src="https://www.simplifier.io/wp-content/uploads/2019/02/social-f.png" alt="Simplifier AG Facebook" /></a>
+                                <a href="https://twitter.com/simplifier_io/" target="_blank"><img src="https://www.simplifier.io/wp-content/uploads/2019/02/social-t.png" alt="Simplifier AG Twitter" /></a>
+                                <a href="https://www.linkedin.com/company/simplifier-ag/" target="_blank"><img src="https://www.simplifier.io/wp-content/uploads/2019/02/social-l.png" alt="Simplifier AG LinkedIn" /></a>
+                                <a href="https://www.youtube.com/c/Simplifier/" target="_blank"><img src="https://www.simplifier.io/wp-content/uploads/2019/02/social-y.png" alt="Simplifier AG Youtube" /></a>
+                                <a href="https://www.simplifier.io/en/simplifier-platform/freemium/" target="_blank" style="padding-right:5px;"><img src="https://www.simplifier.io/wp-content/uploads/2019/02/icon-demo.png" alt="Simplifier Freemium" /></a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+</body>
+
+</html>

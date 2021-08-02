@@ -1,0 +1,17 @@
+
+<h1>REQUEST APP</h1>
+
+<ul>
+        <li>Username: {{fullName}}</li>
+        <li>Id: {{userId}}</li>
+        <li>Login: {{userLoginName}}</li>
+        <li>InstanceURL: {{instanceURL}}</li>
+        <li>Mail: {{email}}</li>
+        <li>App: {{appName}}</li>
+</ul>
+<hr/>
+Customer comments:
+<pre>
+{{comments}}
+</pre>
+

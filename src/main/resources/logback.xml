@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5level] %logger{0}: %m%n%rEx{full,
+                java.lang.reflect.Method,
+                akka.http.scaladsl,
+                akka.stream.impl.fusing,
+                scala.concurrent.forkjoin,
+                akka.dispatch.Mailbox,
+                akka.actor,
+                sun.reflect,
+                net.sf.cglib,
+                ByCGLIB
+                }</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="akka" level="ERROR"/>
+    <logger name="akka.cluster.Cluster" level="INFO"/>
+    <logger name="org.apache.zookeeper" level="ERROR"/>
+
+    <logger name="io.simplifier" level="TRACE"/>
+
+    <root level="${root.level:-INFO}">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

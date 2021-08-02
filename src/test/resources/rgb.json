@@ -1,0 +1,19 @@
+{
+  "id":"DB595D72C21087DB5458F12CA5D484C30B78300418B2FD001F36CD512942B4D2",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"RGB",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"RGB",
+    "description":"",
+    "extendedType":{
+      "parentType":"22ED1F787B6B0926AB0577860AF7543705341C053EB1B4A74E7CC199A0645E52",
+      "properties":{
+        "Nullable":"false",
+        "Values":"[\"Red\", \"Green\", \"Blue\"]"
+      }
+    },
+    "tags":[],
+    "autogen":false
+  }
+}

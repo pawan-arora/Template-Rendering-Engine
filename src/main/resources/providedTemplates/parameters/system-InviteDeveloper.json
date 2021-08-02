@@ -1,0 +1,33 @@
+{
+  "id":"",
+  "feature":"com.itizzimo.appServer.transport.feature.TemplateFeature",
+  "name":"InviteDeveloper",
+  "compatibilityVersion":1,
+  "artifactData":{
+    "name":"ForgotPasswordMail_de",
+    "description":"",
+    "folderName":"system",
+    "validateIn":false,
+    "validateOut":false,
+    "params":[
+      {
+        "dataTypeId":"22ED1F787B6B0926AB0577860AF7543705341C053EB1B4A74E7CC199A0645E52",
+        "name":"AppName",
+        "description":"",
+        "optional":true
+      },
+      {
+        "dataTypeId":"22ED1F787B6B0926AB0577860AF7543705341C053EB1B4A74E7CC199A0645E52",
+        "name":"email",
+        "description":"",
+        "optional":true
+      },
+      {
+        "dataTypeId":"22ED1F787B6B0926AB0577860AF7543705341C053EB1B4A74E7CC199A0645E52",
+        "name":"invitationUrl",
+        "description":"",
+        "optional":true
+      }
+    ]
+  }
+}

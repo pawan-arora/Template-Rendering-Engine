@@ -1,0 +1,30 @@
+{
+  "id":"2",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"Tree",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"Tree",
+    "description":"",
+    "structType":{
+      "fields":[
+        {
+          "name":"value",
+          "description":"",
+          "fieldType":"B9B1191E0B70BA0845CF4F6A4F4C017594F8BA84FD2F1849966081D53A8C836D",
+          "optional":false
+        },
+        {
+          "name":"trees",
+          "description":"",
+          "fieldType":"3",
+          "optional":true
+        }
+      ]
+    },
+    "tags":[
+      "Test"
+    ],
+    "autogen":false
+  }
+}

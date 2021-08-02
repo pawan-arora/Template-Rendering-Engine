@@ -1,0 +1,20 @@
+{
+  "id":"F88A710D5D04034D066D5F523CB3A4C917ECF9FF7417AD4AF7CC7F84F11FD5E8",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"Modulo11",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"Modulo11",
+    "description":"",
+    "extendedType":{
+      "parentType":"B9B1191E0B70BA0845CF4F6A4F4C017594F8BA84FD2F1849966081D53A8C836D",
+      "properties":{
+        "Max":"10",
+        "Nullable":"false",
+        "Min":"0"
+      }
+    },
+    "tags":[],
+    "autogen":false
+  }
+}

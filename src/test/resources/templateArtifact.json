@@ -1,0 +1,26 @@
+{
+  "id":"CECD0D28D1D9E1A7CEFF6BA2024142454E8907E5A7F38B74594D5BDBF438FD70",
+  "feature":"com.itizzimo.appServer.transport.feature.TemplateFeature",
+  "name":"ComplexGreeting",
+  "compatibilityVersion":1,
+  "artifactData":{
+    "name":"ComplexGreeting",
+    "description":"Renders a greeting with some small talk",
+    "folderName":"HelloWorld",
+    "template":{
+      "BinaryReference":"Templates/HelloWorld/Template-ComplexGreeting.html",
+      "Hash":"ce6cd328b9dea19ea93aa9944e67e92e047b74cc612450b75da3164d50d4354b"
+    },
+    "validateIn":true,
+    "validateOut":false,
+    "params":[
+      {
+        "dataTypeId":"937F96E7F9FE42E3B9395B5E188013F225264BEE30B90B4D7A4EE3681817E416",
+        "name":"dude",
+        "alias":"person",
+        "description":"",
+        "optional":true
+      }
+    ]
+  }
+}

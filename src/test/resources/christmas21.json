@@ -1,0 +1,20 @@
+{
+  "id":"1F18ECFFD3C41918A28E58D873CEEAF368438B2420F967B0330F0E7A15F99EFE",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"Christmas21",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"Christmas21",
+    "description":"",
+    "extendedType":{
+      "parentType":"06A9841478D7BE17C423F11C38CD6829E372093DBEC144F2A85FC7165BE8CD80",
+      "properties":{
+        "Nullable":"false",
+        "Max":"2021-12-26T23:59",
+        "Min":"2021-12-25T00:00"
+      }
+    },
+    "tags":[],
+    "autogen":false
+  }
+}

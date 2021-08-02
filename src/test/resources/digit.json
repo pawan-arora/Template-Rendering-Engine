@@ -1,0 +1,19 @@
+{
+  "id":"367B3DD0D5B5AB0C2C83115986BE490D6232A36ECA8D2762ACA3C35ABB4D64B9",
+  "feature":"com.itizzimo.appServer.transport.feature.DataTypeFeature",
+  "name":"Digit",
+  "compatibilityVersion":4,
+  "artifactData":{
+    "name":"Digit",
+    "description":"",
+    "extendedType":{
+      "parentType":"22ED1F787B6B0926AB0577860AF7543705341C053EB1B4A74E7CC199A0645E52",
+      "properties":{
+        "Regex":"^\\d$",
+        "Nullable":"true"
+      }
+    },
+    "tags":[],
+    "autogen":false
+  }
+}
