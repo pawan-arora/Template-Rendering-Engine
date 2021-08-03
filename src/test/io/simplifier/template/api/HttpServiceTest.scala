@@ -10,15 +10,10 @@ import akka.util.{ByteString, Timeout}
 import com.typesafe.config.ConfigFactory
 import io.circe.Json
 import io.simplifier.api.messages.v1.{HttpRequestStreamV1, HttpRequestStrictV1, HttpResultStreamV1, HttpResultStrictV1}
-import io.simplifier.template.executor.Executor.{RenderNotFound, RenderStorageError, RenderTemplate, RenderValidationError, RenderedTemplate}
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike
 import org.scalatest.matchers.should.Matchers
 import io.circe.parser._
-import io.simplifier.template.api.ApiDispatcher.{AllHttpRegisterPaths, HttpRegisterPaths}
-import io.simplifier.template.api.HttpService.{ParsingError, ServiceUnavailable}
-import io.simplifier.template.executor.ParameterConverter.ParametersValidationError
-import io.simplifier.template.provider.TemplateProvider.{TemplateNotFound, TemplateStorageError}
 
 import scala.concurrent.Await
 import scala.concurrent.duration.DurationInt

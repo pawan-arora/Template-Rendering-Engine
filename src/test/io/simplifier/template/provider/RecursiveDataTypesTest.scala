@@ -8,9 +8,6 @@ import akka.testkit.{ImplicitSender, TestKit, TestProbe}
 import com.gilt.handlebars.scala.binding.dynamic.valueToBinding
 import com.typesafe.config.ConfigFactory
 import io.circe.Json
-import io.simplifier.template.provider.DataTypeLoader.DynamicDataTypeLoader
-import io.simplifier.template.provider.Provider.{DataTypeById, DataTypeWithDependencies}
-import io.simplifier.template.provider.StorageProvider.{ReadString, StringRead}
 import org.apache.commons.io.IOUtils
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike

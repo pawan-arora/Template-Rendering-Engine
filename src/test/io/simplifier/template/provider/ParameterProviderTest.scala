@@ -6,9 +6,6 @@ import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import akka.testkit.TestActor.KeepRunning
 import akka.testkit.{ImplicitSender, TestKit, TestProbe}
 import com.typesafe.config.ConfigFactory
-import io.simplifier.template.design.transport.Feature
-import io.simplifier.template.provider.ParameterLoader.{DynamicParameterLoader, ParametersError, ParametersNotFound, ParametersStorageError}
-import io.simplifier.template.provider.Provider.{ParametersForTemplate, ParametersWithDataTypes}
 import org.apache.commons.io.IOUtils
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike

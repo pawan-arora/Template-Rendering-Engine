@@ -5,12 +5,10 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 import io.circe.Json
-import io.simplifier.template.design.transport.Feature
 import org.apache.commons.io.IOUtils
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import io.circe.parser._
-import io.simplifier.template.entity.DataType._
 
 import scala.util._
 

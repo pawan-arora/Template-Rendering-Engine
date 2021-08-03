@@ -7,7 +7,6 @@ import akka.testkit.{ImplicitSender, TestKit, TestProbe}
 import akka.util.Timeout
 import com.typesafe.config.ConfigFactory
 import io.simplifier.api.messages.v1.{HttpRequestStreamV1, HttpRequestStrictV1}
-import io.simplifier.template.api.ApiDispatcher.AllHttpRegisterPaths
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike
 import org.scalatest.matchers.should.Matchers

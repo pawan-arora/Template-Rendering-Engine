@@ -6,16 +6,10 @@ import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import akka.testkit.{ImplicitSender, TestActor, TestKit, TestProbe}
 import com.typesafe.config.ConfigFactory
 import io.circe.Json
-import io.simplifier.template.executor.Executor.{RenderError, RenderNotFound, RenderStorageError, RenderTemplate, RenderValidationError, RenderedTemplate}
-import io.simplifier.template.provider.Provider.{Template, TemplateForName}
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike
 import org.scalatest.matchers.should.Matchers
 import io.circe.parser._
-import io.simplifier.template.entity.DataType.InvalidType
-import io.simplifier.template.executor.ParameterConverter.{InputForTemplate, ParametersForRendering, ParametersRetreivingError, ParametersValidationError}
-import io.simplifier.template.provider.ParameterLoader.{ParametersError, ParametersNotFound, ParametersStorageError}
-import io.simplifier.template.provider.TemplateProvider.{TemplateError, TemplateNotFound, TemplateStorageError}
 
 import scala.concurrent.duration._
 

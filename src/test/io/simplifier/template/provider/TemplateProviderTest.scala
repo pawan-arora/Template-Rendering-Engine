@@ -4,10 +4,6 @@ import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import akka.testkit.TestActor.KeepRunning
 import akka.testkit.{ImplicitSender, TestKit, TestProbe}
 import com.typesafe.config.ConfigFactory
-import io.simplifier.template.provider.PersistenceAccess.ItemNotFound
-import io.simplifier.template.provider.Provider.{Template, TemplateForName}
-import io.simplifier.template.provider.StorageProvider.{NotFound, ReadString, StorageError, StringRead}
-import io.simplifier.template.provider.TemplateProvider.{TemplateError, TemplateNotFound, TemplateStorageError}
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike
 import org.scalatest.matchers.should.Matchers

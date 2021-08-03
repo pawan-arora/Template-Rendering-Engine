@@ -4,8 +4,6 @@ import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-import io.simplifier.template.entity.DataType.{CollectionType, Constraint, DateType, DomainType, DueDate, FromDate, IntegerType, Max, Min, Nullable, PossibleValues, Regex, StringType, StructType}
-import io.simplifier.template.entity.{DataType, Parameter}
 import org.apache.commons.io.IOUtils
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers

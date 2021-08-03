@@ -3,7 +3,6 @@ package io.simplifier.template.importer
 import akka.actor.testkit.typed.scaladsl.ScalaTestWithActorTestKit
 import akka.actor.typed.scaladsl.Behaviors
 import akka.testkit.TestProbe
-import io.simplifier.template.design.transport.Feature.TransportFeature
 import io.simplifier.template.importer.Importer.Validated
 import io.simplifier.template.importer.Validator.{Error, MissingFeature, MissingFeatures, Ok, Skipped, Validate, ValidationMessage, ValidationResult, ValidatorFactory}
 import org.scalatest.flatspec.AnyFlatSpecLike

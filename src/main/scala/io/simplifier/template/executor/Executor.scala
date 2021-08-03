@@ -4,13 +4,31 @@ import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import io.circe.Json
 import io.simplifier.template.executor.Executor._
 
+import scala.concurrent.duration.Duration
+
 class Executor(provider: ActorRef, renderer: Props) extends Actor {
+
+  private var minimum: Long = Int.MaxValue
+  private var maximum: Long = 0
+  private var average: Long = 0
+  private var count: Long = 1
 
   override def receive: Receive = {
     case request: RenderTemplate =>
       val renderActor = context.actorOf(renderer)
       renderActor forward request
 
+    case request: FetchResponseTime =>
+      minimum = minimum.min(request.overallDuration._1)
+      maximum = maximum.max(request.overallDuration._1)
+      count = count + 1
+      average = (minimum + maximum) / count
+
+    case CalculateMinimum => sender() ! minimum
+
+    case CalculateMaximum => sender() ! maximum
+
+    case CalculateAverage => sender() ! average
   }
 
 }
@@ -31,7 +49,14 @@ object Executor {
   def props(provider: ActorRef, renderer: Props): Props = Props(new Executor(provider, renderer))
 
   case class RenderTemplate(name: String, folder: String, input: Json, label: String)
+  case class FetchResponseTime(durationTemplateRendering: Duration, overallDuration: Duration)
   case class RenderedTemplate(item: String, label: String)
+
+  sealed trait Calculator
+  case object CalculateMinimum extends Calculator
+  case object CalculateMaximum extends Calculator
+  case object CalculateAverage extends Calculator
+
   sealed trait RenderError extends Throwable { self =>
 
     def withLabel(label: String): RenderError = this match {

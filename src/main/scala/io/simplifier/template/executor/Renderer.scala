@@ -41,6 +41,8 @@ class Renderer(provider: ActorRef, parameterConverter: Props) extends Actor with
       provider ! TemplateForName(name, folder)
       context.actorOf(parameterConverter) ! InputForTemplate(name, folder, parameters)
       context become rendering
+
+    case FetchResponseTime => finalTimings()
   }
 
   def rendering: Receive = {
@@ -107,6 +109,7 @@ class Renderer(provider: ActorRef, parameterConverter: Props) extends Actor with
       Some(Duration(JavaDuration.between(timeStartRenderTemplate.getOrElse(now), now).getNano, NANOSECONDS))
     overallDuration =
       Some(Duration(JavaDuration.between(timeStartRetrieveRequest.get, now).getNano, NANOSECONDS))
+    context.parent ! FetchResponseTime(durationTemplateRendering.get, overallDuration.get)
     log.debug(s"Time Rendering Template: ${durationTemplateRendering.get}")
     log.debug(s"Time in Renderer: ${overallDuration.get}")
   }

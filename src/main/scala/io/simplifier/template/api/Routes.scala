@@ -1,20 +1,18 @@
 package io.simplifier.template.api
 
 import akka.actor.ActorRef
-import akka.http.scaladsl.Http
-import akka.http.scaladsl.model._
-import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.server.Directives._
+import akka.http.scaladsl.server.Route
 import akka.pattern.ask
 import akka.util.Timeout
 import io.circe.Json
-import io.simplifier.template.executor.Executor.{RenderTemplate, RenderedTemplate}
 import io.circe.parser._
+import io.simplifier.template.executor.Executor._
+import io.simplifier.template.params.{JsonSupport, Parameters}
 
 import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success}
 
-class Routes(executor: ActorRef)(implicit timeout: Timeout) {
+class Routes(executor: ActorRef)(implicit timeout: Timeout) extends JsonSupport {
 
   lazy val route: Route = {
     pathEndOrSingleSlash {
@@ -41,9 +39,56 @@ class Routes(executor: ActorRef)(implicit timeout: Timeout) {
           }
 
         }
-      }
-  }
+      } ~
+      post {
+        pathPrefix(Segment/Segment) { case(folder, template)  =>
 
+          entity(as[Parameters]) { parameters =>
+
+            val jsonString = parameters.jsonString
+            val input = parse(jsonString).getOrElse(Json.Null)
+            val renderIt = RenderTemplate(template, folder, input, "")
+
+            extractExecutionContext { implicit ec =>
+              onComplete(render(renderIt)) { response =>
+                response.map(complete(_)).getOrElse(complete("ERROR"))
+              }
+            }
+          }
+        }
+      } ~
+      get {
+        path("fetch"/"time"/"minimum") {
+          extractExecutionContext { implicit ec =>
+            onComplete(fetchCalculatedValue(CalculateMinimum)) { response =>
+                response.map(elm => complete(elm.toString)).getOrElse(complete("ERROR"))
+            }
+          }
+        }
+      } ~
+      get {
+        path("fetch"/"time"/"maximum") {
+          extractExecutionContext { implicit ec =>
+            onComplete(fetchCalculatedValue(CalculateMaximum)) { response =>
+              response.map(elm => complete(elm.toString)).getOrElse(complete("ERROR"))
+            }
+          }
+        }
+      } ~
+      get {
+        path("fetch"/"time"/"average") {
+          extractExecutionContext { implicit ec =>
+            onComplete(fetchCalculatedValue(CalculateAverage)) { response =>
+              response.map(elm => complete(elm.toString)).getOrElse(complete("ERROR"))
+            }
+          }
+        }
+      }
+   }
+
+  def fetchCalculatedValue(calc: Calculator)(implicit ec: ExecutionContext): Future[Any] = {
+    (executor ? calc)
+  }
   def render(renderIt: RenderTemplate)(implicit ec: ExecutionContext): Future[String] = {
     (executor ? renderIt).map {
       case RenderedTemplate(item, _) =>

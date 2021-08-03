@@ -3,7 +3,6 @@ package io.simplifier.template.importer
 import akka.actor.testkit.typed.scaladsl.{ManualTime, ScalaTestWithActorTestKit, TestProbe}
 import io.simplifier.template.importer.Importer.{Import, Validated}
 import io.simplifier.template.importer.Validator.{MissingFeatures, Ok, Skipped, Validate}
-import io.simplifier.template.provider.PersistenceAccess
 import org.apache.commons.io.IOUtils
 import org.scalatest.flatspec.AnyFlatSpecLike
 

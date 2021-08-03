@@ -5,8 +5,6 @@ import java.nio.charset.StandardCharsets
 import akka.actor.{ActorSystem, Props}
 import akka.testkit.{ImplicitSender, TestKit}
 import com.typesafe.config.ConfigFactory
-import io.simplifier.template.provider.PersistenceAccess.ItemNotFound
-import io.simplifier.template.provider.StorageProvider._
 import org.mockito.MockitoSugar._
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike

@@ -6,12 +6,6 @@ import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import akka.testkit.TestActor.KeepRunning
 import akka.testkit.{ImplicitSender, TestKit, TestProbe}
 import com.typesafe.config.ConfigFactory
-import io.simplifier.template.design.transport.Feature
-import io.simplifier.template.entity.DataType
-import io.simplifier.template.provider.DataTypeLoader.{CompleteDataType, IncompleteDataType}
-import io.simplifier.template.provider.DataTypeProvider.DataTypeError
-import io.simplifier.template.provider.Provider.{DataTypeById, DataTypeWithDependencies}
-import io.simplifier.template.provider.StorageProvider.{NotFound, ReadString, StorageError, StringRead}
 import org.apache.commons.io.IOUtils
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike

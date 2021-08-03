@@ -13,9 +13,6 @@ import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike
 import org.scalatest.matchers.should.Matchers
 import io.simplifier.messages._
-import io.simplifier.template.api.ApiDispatcher
-import io.simplifier.template.api.ApiDispatcher.{AllHttpRegisterPaths, HttpRegisterPath, HttpRegisterPaths}
-import io.simplifier.template.node.TemplateNode.{MODULE_GROUP_NAME, RegisterFunction, defaultRegisterPaths}
 import io.simplifier.api.registry.ApiRouteEntry.Implicits._
 
 import scala.concurrent.duration._

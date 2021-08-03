@@ -11,13 +11,6 @@ import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AnyFlatSpecLike
 import org.scalatest.matchers.should.Matchers
 import io.circe.parser._
-import io.simplifier.template.design.transport.Feature
-import io.simplifier.template.entity.DataType.{InvalidType, InvalidTypeForField, StringType}
-import io.simplifier.template.entity.{DataType, Parameter}
-import io.simplifier.template.executor.ParameterConverter.{InputForTemplate, InvalidParameter, MissingParameter, ParametersForRendering, ParametersRetreivingError, ParametersValidationError}
-import io.simplifier.template.provider.ParameterLoader.{ParametersError, ParametersNotFound, ParametersStorageError}
-import io.simplifier.template.provider.ParameterProvider
-import io.simplifier.template.provider.Provider.{ParametersForTemplate, ParametersWithDataTypes}
 import org.apache.commons.io.IOUtils
 import org.w3c.dom.ranges.RangeException
 
